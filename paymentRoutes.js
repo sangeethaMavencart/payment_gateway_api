@@ -181,47 +181,4 @@ router.post("/payment-failure", async (req, res) => {
     }
 });
 
-// Add a route to debug and test hash generation
-// router.get("/test-hash", (req, res) => {
-//   const testData = {
-//     key: process.env.MERCHANT_KEY,
-//     txnid: "TXN" + Date.now(),
-//     amount: "500.00",
-//     productinfo: "Node.js Course",
-//     firstname: "Sangeetha",
-//     email: "Sangeetha@gmail.com",
-//     udf1: "",
-//     udf2: "",
-//     udf3: "",
-//     udf4: "",
-//     udf5: ""
-//   };
-
-//   const hash = generateHash(testData, process.env.SALT);
-
-//   res.json({
-//     testData,
-//     hash,
-//     hashString: [
-//       testData.key,
-//       testData.txnid,
-//       testData.amount,
-//       testData.productinfo,
-//       testData.firstname,
-//       testData.email,
-//       testData.udf1 || '',
-//       testData.udf2 || '',
-//       testData.udf3 || '',
-//       testData.udf4 || '',
-//       testData.udf5 || '',
-//       '',
-//       '',
-//       '',
-//       '',
-//       '',
-//       process.env.SALT
-//     ].join('|')
-//   });
-// });
-
 module.exports = router;
